@@ -17,7 +17,9 @@
   },
   "homepage": "https://github.com/marteabra/Tema5-gruppe3#readme",
   "dependencies": {
-    "vue": "^3.2.27"
+    "vue": "^3.2.27",
+    "vue-router": "^3.5.3",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.0.1",
