@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+textarea {
+    overflow: auto;
+ }
+ button {
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+ }
+ img {
+    width: 100%;
+ }
+
+button,
+input,
+select,
+textarea {
+   font-family: inherit;
+   font-size: 100%;
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   cursor: pointer;
+}
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+body {
+   line-height: 1.5;
+}
+
+ol,
+ul {
+   list-style: none;
+}
+li {
+   text-decoration: none;
+}
