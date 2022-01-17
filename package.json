@@ -2,7 +2,7 @@
   "name": "tema5-gruppe3",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "vite.config.js",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,22 +10,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marteabra/Tema5-gruppe3.git"
+    "url": "git+https://github.com/tse018/vue_starter_template.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/marteabra/Tema5-gruppe3/issues"
+    "url": "https://github.com/tse018/vue_starter_template/issues"
   },
-  "homepage": "https://github.com/marteabra/Tema5-gruppe3#readme",
+  "homepage": "https://github.com/tse018/vue_starter_template#readme",
   "dependencies": {
-    "vue": "^3.2.27",
-    "vue-router": "^3.5.3",
+    "vue": "^3.2.24",
+    "vue-router": "^4.0.12",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^2.0.1",
-    "@vue/compiler-sfc": "^3.2.27",
-    "vite": "^2.7.12"
+    "@vitejs/plugin-vue": "^1.10.2",
+    "@vue/compiler-sfc": "^3.2.24",
+    "vite": "^2.7.0"
   }
 }
