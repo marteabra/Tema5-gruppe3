@@ -15,26 +15,26 @@
             </li>
 
             <div class="header__mobile">
-               <li class="header__item--about">
+               <li class="header__item-about">
                   About us
                </li>
 
-               <li class="header__item--instagram">
+               <li class="header__item-instagram">
                   Instagram
                   <i class="fas fa-arrow-up"></i>
                </li>
 
-               <li class="header__item--twitter">
+               <li class="header__item-twitter">
                   Twitter
                   <i class="fas fa-arrow-up"></i>
                </li>
 
-               <li class="header__item--mail">
+               <li class="header__item-mail">
                   in@dex.info
                </li>
             </div>
          </ul>
-         
+
          <button @click="displaySearch" aria-label="open searchbar" class="header__search">
             <i class="fas fa-search"></i>
          </button>
@@ -116,25 +116,25 @@
    justify-content: center;
 }
 
-.header__item--about {
+.header__item-about {
    position: absolute;
    top: 0;
    left: 65%;
 }
 
-.header__item--instagram {
+.header__item-instagram {
    position: absolute;
    top: 60%;
    left: 65%;
 }
 
-.header__item--twitter {
+.header__item-twitter {
    position: absolute;
    top: 85%;
    left: 65%;
 }
 
-.header__item--mail {
+.header__item-mail {
    position: absolute;
    top: 155%;
    left: 65%;
