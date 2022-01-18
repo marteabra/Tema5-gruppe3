@@ -65,7 +65,7 @@
          displayMenu() {
             this.menuVisible = !this.menuVisible;
          },
-         
+
          displaySearch() {
             this.searchVisible = !this.searchVisible;
          }
@@ -78,13 +78,27 @@
    .header__mobile {
       display: none;
    }
+
+   .header__menu {
+      /* Header__menu button is overlaying header__input */
+      z-index: 100;
+   }
+
+   .header__container {
+      /* mobile version the searchbar is overlaying header__logo  */
+      z-index: 1;
+   }
+
+   .header__search {
+      /* Searchbar button is overlaying header__input */
+      z-index: 100;
+   }
 }
 
 .header {
    position: fixed;
    width: 100%;
-   height: 10%;
-   z-index: 100;   
+   height: 10%; 
 }
 
 .header__navbar {
