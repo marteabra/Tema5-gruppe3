@@ -1,14 +1,14 @@
 :root {
-   --highlight: #ADFF00;
-   --primary: #000000;
-   --secondary: #E3E3E3;
+    --highlight: #ADFF00;
+    --primary: #000000;
+    --secondary: #E3E3E3;
 
-   --heading-font-size: 50px;
-   --heading-line-height: 66px;
+    --heading-font-size: 50px;
+    --heading-line-height: 66px;
 
-   --body-font-size: 30px;
-   --body-line-height: 40px;
+    --body-font-size: 30px;
+    --body-line-height: 40px;
 
-   --caption-font-size: 20px;
-   --caption-line-height: 26px;
+    --caption-font-size: 20px;
+    --caption-line-height: 26px;
 }
