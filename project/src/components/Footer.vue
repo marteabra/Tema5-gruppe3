@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="footer__logo">in(dex)</div>
-    <div class="footer__address" v-for="address in information">
+    <div href="/" class="footer__address" v-for="address in information">
       {{ information.address }}
     </div>
     <div class="footer__item">
@@ -31,4 +31,22 @@ export default {
 </script>
 
 <style>
+footer {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 80 20 80;
+}
+
+.footer__address {
+  max-width: 15%;
+  margin-left: 400px;
+  text-decoration: none;
+}
+
+.fa-arrow-up {
+  transform: rotate(50deg);
+}
 </style>
