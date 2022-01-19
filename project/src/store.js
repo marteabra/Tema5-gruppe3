@@ -12,15 +12,15 @@ export default {
             { title: `Projects` },
             { title: `Podcasts` },
          ],
-      
+
          information: {
             address: `172 Classon Avenue. Brooklyn, NY 11205. USA`
          },
-      
+
          announcement: {
             message: `OUT NOW! Issue #123 “Dialogues on Recursive Colonialisms, Speculative Computation, and the Techno-social”`
          },
-      
+
          articles: [
             {
                title: 'The Institute of the Cosmos',
@@ -69,7 +69,7 @@ export default {
                },
             },
          ],
-      
+
          books: [
             {
                title: 'Radicalizing Care',
@@ -87,7 +87,7 @@ export default {
                cover: 'book_3.png'
             },
             {
-      
+
                title: 'Parapolitics',
                writers: 'ANSELM FRANKE, NIDA GHOUSE, PAZ GUEVARA, ANTONIA MAJACA (EDS.)',
                cover: 'book_4.png'
@@ -103,7 +103,7 @@ export default {
                cover: 'book_6.png'
             },
          ],
-      
+
          journal: [
             {
                title: 'And My Flames Stay Till You Get Out My Way',
@@ -124,7 +124,7 @@ export default {
                image: 'journal_3.jpeg'
             },
          ],
-      
+
          pages: [
             {
                name: 'About us',
