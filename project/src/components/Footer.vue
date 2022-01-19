@@ -37,7 +37,7 @@ footer {
   bottom: 0;
   width: 100%;
   justify-content: space-between;
-  padding: 0 80 20 80;
+  padding: 0 80 20 10;
 }
 
 .footer__address {
