@@ -1,6 +1,5 @@
 <template>
   <Header />
-  <Slideshow />
   <Footer />
 </template>
 
