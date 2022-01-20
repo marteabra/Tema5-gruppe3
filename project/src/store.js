@@ -14,6 +14,12 @@ export default {
          announcement: {
             message: `OUT NOW! Issue #123 “Dialogues on Recursive Colonialisms, Speculative Computation, and the Techno-social”`
          },
+      };
+   },
+
+   getters: {
+      getAddress(state) {
+         return state.information;
       }
    },
 
