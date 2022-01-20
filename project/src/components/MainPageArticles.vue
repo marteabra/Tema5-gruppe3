@@ -4,7 +4,7 @@
          Latest
       </div>
 
-      <div v-for="article in getArticles" :key="article.title" class="articles__container">
+      <div v-for="(article, index) in getArticles" :class="'articles__item-' + index">
          <div class="articles__title">
             {{ article.title }}
          </div>
@@ -24,7 +24,7 @@
    export default {
       computed: {
          getArticles() {
-            return this.$store.getters.getArticles;
+            return this.$store.getters.getArticle;
          },
       },
    };

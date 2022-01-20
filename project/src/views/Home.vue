@@ -1,25 +1,19 @@
 <template>
-  <div class="articles">
-    <div class="articles__new">
-      Latest
-    </div>
-
-    <div v-for="article in getArticles">
-      <div class="articles__title">
-        {{ article.title }}
-      </div>
-    </div>
-  </div>
+  <Header />
+  <MainPageArticles />
+  <Footer />
 </template>
 
 <script>
 import Header from "../components/Header.vue";
+import MainPageArticles from '../components/MainPageArticles.vue';
 import Footer from "../components/Footer.vue";
 import Slideshow from "../components/Slideshow.vue";
 
 export default {
   components: {
     Header,
+    MainPageArticles,
     Slideshow,
     Footer,
   },

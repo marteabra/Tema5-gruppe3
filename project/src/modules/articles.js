@@ -1,7 +1,7 @@
 export default {
    state() {
       return {
-         articles: [
+         articles: [ 
             {
                title: 'The Institute of the Cosmos',
                slug: 'the-institute-of-the-cosmos',
