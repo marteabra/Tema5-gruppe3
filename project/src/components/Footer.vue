@@ -41,7 +41,7 @@ footer {
 }
 
 .footer__address {
-  max-width: 15%;
+  max-width: 16%;
   margin-left: 400px;
   text-decoration: none;
 }
