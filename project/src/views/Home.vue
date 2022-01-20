@@ -1,4 +1,5 @@
 <template>
+<<<<<<< Updated upstream
   <Header />
   <Footer />
 </template>
@@ -13,6 +14,19 @@ export default {
     Footer,
   },
 };
+=======
+   <HeroSection />
+</template>
+
+<script>
+   import HeroSection from '../components/HeroSection.vue';
+
+   export default {
+      components: {
+         HeroSection,
+      },
+   }
+>>>>>>> Stashed changes
 </script>
 
 <style>
