@@ -1,6 +1,15 @@
 <template>
-  <Header />
-  <Footer />
+  <div class="articles">
+    <div class="articles__new">
+      Latest
+    </div>
+
+    <div v-for="article in getArticles">
+      <div class="articles__title">
+        {{ article.title }}
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -14,8 +23,15 @@ export default {
     Slideshow,
     Footer,
   },
+
+  computed: {
+    getArticles() {
+				return this.$store.getters.getArticle;
+    },
+  },
 };
 </script>
 
 <style>
+
 </style>

@@ -53,20 +53,8 @@ export default {
    },
 
    getters: {
-      getArticleTitles(state) {
-         return state.articles.title;
-      },
-
-      getArticleLead(state) {
-         return state.articles.lead;
-      },
-
-      getArticleImage(state) {
-         return state.articles.preview.image;
+      getArticle(state) {
+         return state.articles;
       },
    },
-
-   mutations: {
-      
-   }
-}
+};
