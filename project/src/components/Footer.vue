@@ -5,17 +5,17 @@
       {{ information.address }}
     </div>
     <div class="footer__item">
-      <li class="footer__item--about">About us</li>
+      <a href="/" class="footer__item-about">About us</a>
 
-      <li class="footer__item--instagram">
+      <a href="/" class="footer__item-instagram">
         Instagram <i class="fas fa-arrow-up"></i>
-      </li>
+      </a>
 
-      <li class="footer__item--twitter">
+      <a href="/" class="footer__item-twitter">
         Twitter <i class="fas fa-arrow-up"></i>
-      </li>
+      </a>
 
-      <li class="footer__item--mail">in@dex.info</li>
+      <a href="/" class="footer__item-mail">in@dex.info</a>
     </div>
   </footer>
 </template>
@@ -41,9 +41,26 @@ footer {
 }
 
 .footer__address {
-  max-width: 15%;
+  max-width: 12%;
   margin-left: 400px;
   text-decoration: none;
+}
+
+.footer__item {
+  display: grid;
+}
+
+.footer__item a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer__item-instagram {
+  margin-top: 20px;
+}
+
+.footer__item-twitter {
+  margin-bottom: 20px;
 }
 
 .fa-arrow-up {
