@@ -1,7 +1,7 @@
 <template>
    <div class="announcement__box"> 
       <div class="announcement__text">
-         OUT NOW! Issue #123 “Dialogues on Recursive Colonialisms, Speculative Computation, and the Techno-social”
+         <span>OUT NOW! Issue #123 “Dialogues on Recursive Colonialisms, Speculative Computation, and the Techno-social”</span>
       </div>
    </div>
 </template>
@@ -29,7 +29,7 @@
 </script>
 
 <style>
-   @media screen and (max-width: 600px) {
+   @media screen and (max-width: 938px) {
       
    }
 
@@ -47,10 +47,32 @@
    .announcement__text {
       font-family: JetBrains Mono;
       font-weight: normal;
-      font-size: 20px;
+      font-size: var(--body-font-size);
       line-height: 40px;
-      height: 2.5em;
-      animation: slide 5s infinite backwards;
+      height: 1.5em;
       overflow: hidden;
    }
+
+   .announcement__text > * {
+      position: relative;
+      animation: 10s linear 0s infinite alternate move;
+   }
+
+   .announcement__text > *.min {
+      min-width: 100%;
+   }
+
+   @keyframes move {
+      0%,
+      25% {
+         transform: translateX(0%);
+         left: -100%;
+      }
+      75%,
+      100% {
+         transform: translateX(-100%);
+         left: 100%;
+      }
+   }
+
 </style>
