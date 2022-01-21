@@ -38,12 +38,12 @@
       font-size: var(--body-font-size);
       line-height: 40px;
       height: 1.5em;
-      overflow: hidden;
+      width: 2000px;
    }
 
    .announcement__text > * {
       position: relative;
-      animation: 10s linear 0s infinite alternate move;
+      animation: 25s linear 0s infinite alternate move;
    }
 
    .announcement__text > *.min {
