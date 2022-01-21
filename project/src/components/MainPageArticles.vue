@@ -55,5 +55,5 @@
       margin: 0 20px;
       text-align: center;
       font-size: 20px;
-   } 
+   }
 </style>
