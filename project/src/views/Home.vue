@@ -17,12 +17,6 @@ export default {
     Slideshow,
     Footer,
   },
-
-  computed: {
-    getArticles() {
-				return this.$store.getters.getArticle;
-    },
-  },
 };
 </script>
 
