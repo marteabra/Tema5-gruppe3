@@ -92,6 +92,7 @@ export default {
   grid-area: b;
   padding: 20 6 0 20;
   text-align: center;
+  width: 50vw;
 }
 
 .articles__image-1 {
@@ -100,17 +101,18 @@ export default {
 
 .articles__title-1 {
   font-size: var(--heading-font-size);
+  line-height: var(--heading-line-height);
 }
 
 .articles__lead-1 {
-  padding: 0 30 0 30;
+  padding: 0 55 0 55;
 }
 
 .articles__item-2 {
   grid-area: c;
   padding: 20 20 0 6;
   text-align: center;
-  width: 100%;
+  width: 50vw;
 }
 
 .articles__image-2 {
@@ -123,6 +125,6 @@ export default {
 }
 
 .articles__lead-2 {
-  padding: 0 80 0 80;
+  padding: 0 50 0 50;
 }
 </style>
