@@ -4,6 +4,7 @@
   <MainPageArticles />
   <Footer />
 </template>
+
 <script>
 import Header from "../components/Header.vue";
 import Announcement from "../components/Announcement.vue";
@@ -21,5 +22,15 @@ export default {
   },
 };
 </script>
+
 <style>
+  Header {
+    z-index: 1;
+  }
+
+  Footer {
+    position: relative;
+    margin-top: 150px;
+    bottom: 0;
+  }
 </style>
