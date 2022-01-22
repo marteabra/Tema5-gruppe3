@@ -1,27 +1,24 @@
 <template>
   <div class="articles">
-    <div class="articles__news">Latest</div>
+    <div class="articles__news">
+      Latest
+    </div>
 
     <div class="articles__container">
-      <div
-        v-for="(article, index) in getArticles"
-        :class="'articles__item-' + index"
-        :key="index"
-      >
-        <div :class="'articles__title-' + index">
-          {{ article.title }}
-        </div>
+      <div v-for="(article, index) in getArticles" :class="'articles__item-' + index" :key="index">
+
+        <RouterLink :to="{ name: 'article', params: { article_id: article.slug }}" class="articles__link">
+          <div :class="'articles__title-' + index">
+            {{ article.title }}
+          </div>
+        </RouterLink>
 
         <div :class="'articles__lead-' + index">
           {{ article.lead }}
         </div>
 
         <figure :class="'articles__figure-' + index">
-          <img
-            :src="article.preview.image"
-            :alt="article.preview.caption"
-            :class="'articles__image-' + index"
-          />
+          <img :src="article.preview.image" :alt="article.preview.caption" :class="'articles__image-' + index" />
         </figure>
       </div>
     </div>
@@ -126,5 +123,10 @@ export default {
 
 .articles__lead-2 {
   padding: 0 50 0 50;
+}
+
+.articles__link {
+  text-decoration: none;
+  color: var(--primary);
 }
 </style>
