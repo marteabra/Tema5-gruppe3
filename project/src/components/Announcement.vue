@@ -17,7 +17,7 @@
 </script>
 
 <style>
-   /* content box */ 
+   /* content box */
    .announcement__box {
       position: relative;
       left: 0;
