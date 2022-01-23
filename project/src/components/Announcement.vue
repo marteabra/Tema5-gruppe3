@@ -31,11 +31,12 @@
 
    /* content-text styling */
    .announcement__text {
-      display: inline-block;
-      width: 2000px;
       font-family: JetBrains Mono;
       font-weight: normal;
       font-size: var(--body-font-size);
+      text-align-last: initial;
+      overflow: hidden;
+      white-space: nowrap;
    }
 
    /* content-text animation, direction, placement and duration */
