@@ -2,6 +2,7 @@
   <Header />
   <Announcement />
   <MainPageArticles />
+  <Books />
   <Footer />
 </template>
 
@@ -11,6 +12,7 @@ import Announcement from "../components/Announcement.vue";
 import MainPageArticles from "../components/MainPageArticles.vue";
 import Footer from "../components/Footer.vue";
 import Slideshow from "../components/Slideshow.vue";
+import Books from '../components/Books.vue';
 
 export default {
   components: {
@@ -19,6 +21,7 @@ export default {
     MainPageArticles,
     Slideshow,
     Footer,
+    Books,
   },
 };
 </script>
