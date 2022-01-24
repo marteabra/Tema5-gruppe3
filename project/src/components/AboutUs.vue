@@ -1,13 +1,10 @@
 <template>
     <div v-for="page in pageContent" class="h1">
         {{ page.content.title }}
-
     </div>
-
         <div>
             {{ body }}
         </div>
-
 </template>
 
 <script>
@@ -24,7 +21,7 @@
             },
         },
 
-        mounted() {
+        mounted: function() {
             this.body = this.$store.state.pages.content.body;
             console.log(this.store);
         },
