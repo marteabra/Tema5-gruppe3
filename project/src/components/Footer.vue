@@ -66,4 +66,10 @@ footer {
 .fa-arrow-up {
   transform: rotate(50deg);
 }
+
+@media screen and (max-width: 930px) {
+  .footer__address {
+    display: none;
+  }
+}
 </style>
