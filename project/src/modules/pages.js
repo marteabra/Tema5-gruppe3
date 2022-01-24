@@ -21,7 +21,12 @@ export default {
 
    getters: {
       getPageContent(state) {
-         return state.pages.content;
+         return state.pages;
+      },
+
+      getPageBody(state) {
+         return state.pages.content.body;
       },
    },
+
 };
