@@ -1,7 +1,6 @@
 export default {
    state() {
       return {
-         index: [],
          pages: [
             {
                name: 'About us',
@@ -25,14 +24,4 @@ export default {
          return state.pages.content;
       },
    },
-
-   mutations: {
-      getPageTitle(state, title) {
-         state.pages.content.push(title);
-      },
-
-      getPageBody(state, body) {
-         state.pages.content.push(body)
-      },
-   }
 };
