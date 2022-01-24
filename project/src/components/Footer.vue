@@ -39,30 +39,24 @@ footer {
   justify-content: space-between;
   padding: 0 80 20 10;
 }
-
 .footer__address {
   max-width: 16%;
   margin-left: 400px;
   text-decoration: none;
 }
-
 .footer__item {
   display: grid;
 }
-
 .footer__item a {
   text-decoration: none;
   color: black;
 }
-
 .footer__item-instagram {
   margin-top: 20px;
 }
-
 .footer__item-twitter {
   margin-bottom: 20px;
 }
-
 .fa-arrow-up {
   transform: rotate(50deg);
 }

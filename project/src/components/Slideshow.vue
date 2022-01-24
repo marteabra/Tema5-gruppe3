@@ -2,16 +2,15 @@
 	<div class="slideshow">
 
 		<div class="slideshow__slides">
-			<figure class="slideshow__slide">
+			<figure class="slideshow__slide" :data-text-after="currentSlide.caption">
 				<img class="slideshow__img" :src="currentSlide.file" :alt="currentSlide.title">
-				<figcaption v-if="showCaption" class="slideshow__caption">{{ currentSlide.caption }}</figcaption>
+				<figcaption class="slideshow__caption">{{ currentSlide.caption }}</figcaption>
 			</figure>
-		</div>
-
-		<div class="slideshow__dots">
+			<div class="slideshow__dots">
 			<button class="slideshow__dot" :class="{pressed: (index === this.index)}" @click="goToIndex(index)" v-for="(slide, index) in slides" :aria-label="`Go to image ${index + 1}`"></button>
 		</div>
-
+		</div>
+		
 	</div>
 </template>
 
@@ -20,17 +19,14 @@
 		data() {
 			return {
 				index: 0,
-				showCaption: false,
-				slides: [
-					{ title: 'image by April Bey', caption: '“And My Flames Stay Till You Get Out My Way” Museum für Moderne Kunst April Bey', file: '/images/journal_1.jpeg' },
-					{ title: 'image by Kenny Fries', caption: '“Crip Time” Vienna Art Week Kenny Fries', file: '/images/journal_2.jpeg' },
-					{ title: 'image by Novuyo Moyo', caption: '“Losing Control” Alte Pinakothek Novuyo Moyo', file: '/images/journal_3.jpeg' },
-				],
 				pressed: 'button-pressed'
 			};
 		},
 
 		computed: {
+			slides() {
+				return this.$store.getters.getSlides;
+			},
 			currentSlide() {
 				return this.slides[this.index];				
 			}
@@ -45,21 +41,8 @@
 </script>
 
 <style>
-	/* .slideshow {
-		position: absolute;
-		width: 90vw;
-		height: 90vh;
-		background-color: aqua;
-	} */
-
-	.slideshow:hover .slideshow__caption {
-		opacity: 1;
-	}
-
 	.slideshow__slides {
-		position: absolute;
-		top: 50;
-		left: 0;
+		position: relative;
 		width: 100%;
 		height: 100%;
 	}
@@ -74,32 +57,35 @@
 		width: 100%;
 		height: 100%;
 		object-fit: contain;
+		filter: brightness(100%);
+	}
+
+	.slideshow__img:hover {
+		filter: brightness(90%);
 	}
 
 	.slideshow__caption {
+		display: none;
 		position: absolute;
-		left: 0;
-		bottom: 0;
-		width: 100%;
+		top: 50%;
+		margin-top: -10%;
+		left: 50%;
+		margin-left: -30%;
+		width: 60%;
 		text-align: center;
 		font-size: 50px;
 		color: white;
 		font-weight: 400;
-		padding: 0.5em;
 	}
 
-	.slideshow__extra {
-		position: absolute;
-		top: 0;
-		left: 0;
-		z-index: 10;
+	.slideshow__img:hover + .slideshow__caption {
+		display: block;
 	}
 
 	.slideshow__dots {
 		position: absolute;
-		bottom: 0;
-		left: 50px;
-		transform: translateY(100%);
+		bottom: 20px;
+		left: 30px;
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: center;
