@@ -17,33 +17,33 @@
 </script>
 
 <style>
-   @media screen and (max-width: 938px) {
-      
-   }
-
+   /* content box */
    .announcement__box {
       position: relative;
-      left: 0%;
-      right: 0%;
+      left: 0;
+      right: 0;
       top: 50px;
-      bottom: 0%;
+      bottom: 0;
+      height: 3.5em;
       width: 100%;
-      height: 2.5em;
       background: #ADFF00;
    }
 
+   /* content-text styling */
    .announcement__text {
       font-family: JetBrains Mono;
       font-weight: normal;
       font-size: var(--body-font-size);
-      line-height: 40px;
-      height: 1.5em;
+      text-align-last: initial;
       overflow: hidden;
+      white-space: nowrap;
    }
 
+   /* content-text animation, direction, placement and duration */
    .announcement__text > * {
       position: relative;
-      animation: 10s linear 0s infinite alternate move;
+      top: 5;
+      animation: 23s linear 0s infinite move;
    }
 
    .announcement__text > *.min {
@@ -51,16 +51,23 @@
    }
 
    @keyframes move {
-      0%,
-      25% {
-         transform: translateX(0%);
-         left: -100%;
+      from {
+         left: 1500px;
       }
-      75%,
-      100% {
-         transform: translateX(-100%);
-         left: 100%;
+      
+      to {
+         left: -2000px;
       }
    }
 
+   @media screen and (max-width: 938px) {
+      .announcement__box {
+         height: 3.3em;
+      }
+      .announcement__text {
+         position: relative;
+         top: 5;
+         font-size: 25px;
+      }
+   }
 </style>
