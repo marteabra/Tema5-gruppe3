@@ -30,7 +30,7 @@ export default {
             {
                title: 'Dear Navigator',
                writers: 'HU FANG',
-               cover: 'project/public/images/book_6.png'
+               cover: 'project/public/images/book_6.jpg'
             },
          ],
       };
