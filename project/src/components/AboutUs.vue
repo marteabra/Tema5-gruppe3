@@ -1,29 +1,27 @@
 <template>
-    <h1>
-        {{ title }}
+    <h1 v-for="p in pages">
+        {{ p.content.title }}
     </h1>
 
-    <div>
-        {{ body }}
+    <div v-for="(b, index) in body" :class="'paragraph' + index">
+        {{ b }}
     </div>
-    
+
 
 </template>
 
 <script>
 export default {
-    data() {
-        return {
-            pages: [],
-            body: '',
-            title: '',
-        };
+    computed: {
+        pages() {
+            return this.$store.state.pages;
+        }
     },
 
     mounted: function() {
-        this.pages = this.$store.state.pages;
+        this.pages = this.$store;
         this.body = this.$store.state.pages[0].content.body;
-        this.title = this.$store.state.pages[0].content.title;
+        this.title = this.$store.getters.pages[0].content.title;
         console.log(this.$store.state.pages);
     },
 };
