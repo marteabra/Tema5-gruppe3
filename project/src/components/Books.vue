@@ -26,13 +26,13 @@ export default {
 </script>
 
 <style>
-.books__container {
-  display: flex;
-}
-
 .books__heading {
   text-align: center;
   margin: 10px;
+}
+
+.books__container {
+  display: flex;
 }
 
 .books__image-0 {
