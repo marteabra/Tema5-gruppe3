@@ -49,6 +49,7 @@ export default {
   width: 100%;
   min-height: 100%;
   top: 100px;
+  margin-bottom: 150px;
 }
 
 .articles__news {
