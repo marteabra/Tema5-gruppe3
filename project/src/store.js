@@ -30,7 +30,7 @@ export default {
                },
             },
          ],
-      
+
    getters: {
       getAddress(state) {
          return state.information;

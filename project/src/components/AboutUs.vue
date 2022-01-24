@@ -1,11 +1,12 @@
 <template>
-    <div>
+    <h1>
         {{ title }}
-    </div>
+    </h1>
 
-    <p v-for="p in pages">
-        {{ pages }}
-    </p>
+    <div>
+        {{ body }}
+    </div>
+    
 
 </template>
 
@@ -29,5 +30,4 @@ export default {
 </script>
 
 <style>
-
 </style>
