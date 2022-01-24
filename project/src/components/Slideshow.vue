@@ -1,16 +1,14 @@
 <template>
 	<div class="slideshow">
-
-		<div class="slideshow__slides">
-			<figure class="slideshow__slide" :data-text-after="currentSlide.caption">
-				<img class="slideshow__img" :src="currentSlide.file" :alt="currentSlide.title">
-				<figcaption class="slideshow__caption">{{ currentSlide.caption }}</figcaption>
-			</figure>
-			<div class="slideshow__dots">
+		
+		<figure class="slideshow__slide" :data-text-after="currentSlide.caption">
+			<img class="slideshow__img" :src="currentSlide.file" :alt="currentSlide.title">
+		</figure>
+		
+		<div class="slideshow__dots">
 			<button class="slideshow__dot" :class="{pressed: (index === this.index)}" @click="goToIndex(index)" v-for="(slide, index) in slides" :aria-label="`Go to image ${index + 1}`"></button>
 		</div>
-		</div>
-		
+
 	</div>
 </template>
 
@@ -41,7 +39,7 @@
 </script>
 
 <style>
-	.slideshow__slides {
+	.slideshow {
 		position: relative;
 		width: 100%;
 		height: 100%;
@@ -64,10 +62,9 @@
 		filter: brightness(90%);
 	}
 
-	.slideshow__caption {
-		display: none;
+	.slideshow__slide::after {
 		position: absolute;
-		top: 50%;
+    	top: 50%;
 		margin-top: -10%;
 		left: 50%;
 		margin-left: -30%;
@@ -76,16 +73,18 @@
 		font-size: 50px;
 		color: white;
 		font-weight: 400;
-	}
+    	content: attr(data-text-after);
+    	display: none;
+}
 
-	.slideshow__img:hover + .slideshow__caption {
-		display: block;
+	.slideshow__slide:hover::after {
+    display: block;
 	}
 
 	.slideshow__dots {
 		position: absolute;
 		bottom: 20px;
-		left: 30px;
+		left: 0;
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: center;
