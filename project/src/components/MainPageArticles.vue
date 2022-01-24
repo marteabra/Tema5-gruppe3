@@ -63,6 +63,7 @@ export default {
     "b b c c";
 
   margin-top: 40px;
+  margin-bottom: 100px;
 }
 
 .articles__item-0 {
@@ -150,7 +151,6 @@ export default {
       "c";
 
     margin-top: 40px;
-    margin-bottom: 100px;
   }
 
   .articles__item-0 {
