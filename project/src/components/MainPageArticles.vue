@@ -162,7 +162,7 @@ export default {
   }
 
   .articles__lead-0 {
-    width: 100%;
+    max-width: 928px;
     padding: 0;
   }
 
@@ -178,8 +178,9 @@ export default {
   }
 
   .articles__lead-1 {
-    width: 100%;
+    max-width: 932px;
     padding: 0;
+    margin: 0;
   }
 
   .articles__image-1 {
@@ -194,7 +195,7 @@ export default {
   }
 
   .articles__lead-2 {
-    width: 100%;
+    max-width: 928px;
     padding: 0;
   }
 
