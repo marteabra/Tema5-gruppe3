@@ -1,13 +1,17 @@
 <template>
   <div class="articles">
-    <div class="articles__news">
-      Latest
-    </div>
+    <div class="articles__news">Latest</div>
 
     <div class="articles__container">
-      <div v-for="(article, index) in getArticles" :class="'articles__item-' + index" :key="index">
-
-        <RouterLink :to="{ name: 'article', params: { article_id: article.slug }}" class="articles__link">
+      <div
+        v-for="(article, index) in getArticles"
+        :class="'articles__item-' + index"
+        :key="index"
+      >
+        <RouterLink
+          :to="{ name: 'article', params: { article_id: article.slug } }"
+          class="articles__link"
+        >
           <div :class="'articles__title-' + index">
             {{ article.title }}
           </div>
@@ -18,7 +22,11 @@
         </div>
 
         <figure :class="'articles__figure-' + index">
-          <img :src="article.preview.image" :alt="article.preview.caption" :class="'articles__image-' + index" />
+          <img
+            :src="article.preview.image"
+            :alt="article.preview.caption"
+            :class="'articles__image-' + index"
+          />
         </figure>
       </div>
     </div>
@@ -65,14 +73,15 @@ export default {
   display: flex;
   justify-content: center;
   font-size: var(--heading-font-size);
+  line-height: var(--heading-line-height);
 }
 
 .articles__lead-0 {
-  width: 100%;
-  height: 156px;
   text-align: center;
-  font-size: 20px;
-  padding: 0 250 0 250;
+  max-width: 809px;
+  margin: 0 auto;
+  font-size: var(--caption-font-size);
+  line-height: var(--caption-line-height);
 }
 
 .articles__figure-0 {
@@ -102,7 +111,8 @@ export default {
 }
 
 .articles__lead-1 {
-  padding: 0 55 0 55;
+  font-size: var(--caption-font-size);
+  line-height: var(--caption-line-height);
 }
 
 .articles__item-2 {
@@ -122,11 +132,75 @@ export default {
 }
 
 .articles__lead-2 {
-  padding: 0 50 0 50;
+  font-size: var(--caption-font-size);
+  line-height: var(--caption-line-height);
 }
 
 .articles__link {
   text-decoration: none;
   color: var(--primary);
+}
+
+@media screen and (max-width: 968px) {
+  .articles__container {
+    display: grid;
+    grid-template-areas:
+      "a"
+      "b"
+      "c";
+
+    margin-top: 40px;
+    margin-bottom: 100px;
+  }
+
+  .articles__item-0 {
+    width: 100vw;
+  }
+
+  .articles__title-0 {
+    text-align: center;
+  }
+
+  .articles__lead-0 {
+    width: 100%;
+    padding: 0;
+  }
+
+  .articles__image-0 {
+    max-width: 100vw;
+    margin: 20 0 20 0;
+  }
+
+  .articles__item-1 {
+    width: 100vw;
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  .articles__lead-1 {
+    width: 100%;
+    padding: 0;
+  }
+
+  .articles__image-1 {
+    max-width: 100vw;
+    margin: 20 0 20 0;
+  }
+
+  .articles__item-2 {
+    width: 100vw;
+    padding: 0;
+    margin-top: 30px;
+  }
+
+  .articles__lead-2 {
+    width: 100%;
+    padding: 0;
+  }
+
+  .articles__image-2 {
+    max-width: 100vw;
+    margin: 20 0 20 0;
+  }
 }
 </style>
