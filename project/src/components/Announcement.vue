@@ -1,19 +1,21 @@
 <template>
    <div class="announcement__box"> 
       <div class="announcement__text">
-         <span>OUT NOW! Issue #123 “Dialogues on Recursive Colonialisms, Speculative Computation, and the Techno-social”</span>
+         <span v-for="text in getMessage"> 
+            {{ text }}
+         </span>
       </div>
-   </div>
+   </div> -->
 </template>
 
 <script>
    export default {
-      data() {
-         return {
-            
-         }
-      },
-   }
+      computed: {
+         getMessage() {
+            return this.$store.getters.getAnnouncement;
+            }
+         },
+      }
 </script>
 
 <style>
