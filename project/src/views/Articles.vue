@@ -2,6 +2,7 @@
     <Header />
     <Announcement />
     <Birnbaum />
+    <Gutfranski />
     <Footer />
 </template>
 
@@ -9,6 +10,7 @@
     import Header from "../components/Header.vue";
     import Announcement from "../components/Announcement.vue";
     import Birnbaum from "../components/Birnbaum.vue";
+    import Gutfranski from "../components/Gutfranski.vue"
     import Footer from "../components/Footer.vue";
 
     export default {
@@ -16,6 +18,7 @@
             Header,
             Announcement,
             Birnbaum,
+            Gutfranski,
             Footer
         },
     };
