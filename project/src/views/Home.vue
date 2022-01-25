@@ -3,6 +3,7 @@
   <Announcement />
   <MainPageArticles />
   <Books />
+  <Slideshow />
   <Footer />
 </template>
 
