@@ -1,4 +1,9 @@
 <template>
+    {{ pages }}
+
+    {{ title }}
+
+    {{ body }}
 
 </template>
 
@@ -10,11 +15,11 @@ export default {
         },
 
         title() {
-            return this.$store.state.pages[0].content.body;
+            return this.$store.state.pages[0].content.title;
         },
 
         body() {
-            return this.$store.state.pages[0].content.title;
+            return this.$store.state.pages[0].content.body;
         },
     },
 };
