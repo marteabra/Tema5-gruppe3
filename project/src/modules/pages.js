@@ -18,10 +18,4 @@ export default {
          ],
       };  
    },
-
-   getters: {
-      pages(state) {
-         return state.pages;
-      }
-   }
 };
