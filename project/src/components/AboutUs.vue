@@ -1,10 +1,4 @@
 <template>
-<div v-for="(p, index) in pages" :key="index">
-    <p :class="'p__' + index">
-        {{ p.content.body }}
-    </p>
-</div>
-    
 
 </template>
 
