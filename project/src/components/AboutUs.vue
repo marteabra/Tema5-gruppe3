@@ -5,12 +5,9 @@
 
    <div class="page__container">
       <p v-for="(p, index) in body" :class="'page__' + index">
-      {{ p }}
-   </p>
-
+         {{ p }}
+      </p>
    </div>
-   
-
 </template>
 
 <script>
