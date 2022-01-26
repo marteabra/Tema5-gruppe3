@@ -1,10 +1,13 @@
 <template>
-    {{ pages }}
+    <div v-for="p in pages">
+        <h1>
+            {{ p[0].content.title }}
+        </h1>
 
-    {{ title }}
-
-    {{ body }}
-
+        <p>
+            {{ p[0].content.body }}
+        </p>
+    </div>
 </template>
 
 <script>
