@@ -64,7 +64,6 @@ export default {
 
 .articles__item-0 {
   grid-area: a;
-  flex-
 }
 
 .articles__title-0 {
