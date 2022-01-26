@@ -104,7 +104,7 @@ export default {
 }
 
 .articles__image-1 {
-  margin-top: 25px;
+  margin: 25 0 40 0;
 }
 
 .articles__title-1 {
@@ -119,13 +119,13 @@ export default {
 
 .articles__item-2 {
   grid-area: c;
-  padding: 20 20 0 6;
   text-align: center;
   width: 50vw;
 }
 
 .articles__image-2 {
-  margin-top: 25px;
+  margin: 25 0 40 0;
+  padding: 0 20 0 0;
 }
 
 .articles__title-2 {
@@ -202,7 +202,42 @@ export default {
 
   .articles__image-2 {
     max-width: 100vw;
-    margin: 20 0 20 0;
+    padding: 0 20 0 20;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .articles__title-0 {
+    font-size: var(--heading-font-size-small);
+    line-height: var(--heading-line-height-small);
+  }
+
+  .articles__lead-0 {
+    font-size: var(--body-font-size-small);
+    line-height: var(--body-line-height-small);
+    width: 50vw;
+  }
+
+  .articles__title-1 {
+    font-size: var(--heading-font-size-small);
+    line-height: var(--heading-line-height-small);
+  }
+  .articles__lead-1 {
+    font-size: var(--body-font-size-small);
+    line-height: var(--body-line-height-small);
+    padding: 0 55 0 55;
+  }
+
+  .articles__title-2 {
+    font-size: var(--heading-font-size-small);
+    line-height: var(--heading-line-height-small);
+    padding: 0 60 0 60;
+  }
+
+  .articles__lead-2 {
+    font-size: var(--body-font-size-small);
+    line-height: var(--body-line-height-small);
+    padding: 20 60 0 60;
   }
 }
 </style>
