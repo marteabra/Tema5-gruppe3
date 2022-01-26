@@ -1,4 +1,5 @@
 export default {
+   /*****   THIS CONTENT WON´T SHOW IF WE IMPORT TO STORE.JS ********/
    state() {
       return {
          pages: [

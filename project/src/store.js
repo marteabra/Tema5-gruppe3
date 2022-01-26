@@ -6,6 +6,7 @@ import navigation  from './modules/navigation.js'
 export default {
    state() {
       return {
+         /******** THIS CONTENT NEED TO BE HERE TO BE SHOWN IN aboutUs COMPONENT **********/
          pages: [
             {
                name: 'About us',
