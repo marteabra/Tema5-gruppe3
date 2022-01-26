@@ -221,6 +221,7 @@ export default {
   .articles__title-1 {
     font-size: var(--heading-font-size-small);
     line-height: var(--heading-line-height-small);
+    margin-bottom: 20px;
   }
   .articles__lead-1 {
     font-size: var(--body-font-size-small);
@@ -231,13 +232,15 @@ export default {
   .articles__title-2 {
     font-size: var(--heading-font-size-small);
     line-height: var(--heading-line-height-small);
+    margin-bottom: 20px;
+    margin-top: 20px;
     padding: 0 60 0 60;
   }
 
   .articles__lead-2 {
     font-size: var(--body-font-size-small);
     line-height: var(--body-line-height-small);
-    padding: 20 60 0 60;
+    padding: 0 60 0 60;
   }
 }
 </style>
