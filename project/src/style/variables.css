@@ -11,4 +11,14 @@
     
     --caption-font-size: 20px;
     --caption-line-height: 26px;
+
+
+    /*  Variables for breakpoints 1300 and below    */
+
+    --heading-font-size-small: 2.6rem;
+    --heading-line-height-small: 4rem;
+
+    --body-font-size-small: 1rem;
+    --body-line-height-small: 1.7rem;
+
 }

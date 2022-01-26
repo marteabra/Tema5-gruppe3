@@ -3,6 +3,8 @@
   <Announcement />
   <MainPageArticles />
   <Books />
+  <Slideshow />
+  <Subscribe />
   <Footer />
 </template>
 
@@ -13,6 +15,7 @@ import MainPageArticles from "../components/MainPageArticles.vue";
 import Footer from "../components/Footer.vue";
 import Slideshow from "../components/Slideshow.vue";
 import Books from '../components/Books.vue';
+import Subscribe from '../components/Subscribe.vue';
 
 export default {
   components: {
@@ -22,6 +25,7 @@ export default {
     Slideshow,
     Footer,
     Books,
+    Subscribe
   },
 };
 </script>
@@ -33,7 +37,7 @@ export default {
 
   Footer {
     position: relative;
-    margin-top: 150px;
+    margin-top: 280px;
     bottom: 0;
   }
 </style>
