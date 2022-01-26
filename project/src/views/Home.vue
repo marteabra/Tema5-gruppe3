@@ -1,11 +1,15 @@
 <template>
-  <Header />
-  <Announcement />
-  <MainPageArticles />
-  <Books />
-  <Slideshow />
-  <Subscribe />
-  <Footer />
+  <Header /> 
+  <Announcement /> 
+  <Subscribe /> 
+  <div class="grid">
+    
+    <MainPageArticles />
+    <Books />
+    <Slideshow />
+    
+    <Footer />
+  </div>
 </template>
 
 <script>
@@ -31,6 +35,9 @@ export default {
 </script>
 
 <style>
+
+
+
   Header {
     z-index: 1;
   }

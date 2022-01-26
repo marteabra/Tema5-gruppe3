@@ -1,20 +1,21 @@
 <template>
-  <div class="articles">
-    <div class="articles__news">Latest</div>
+  
+    <div class="section__header">Latest</div>
 
-    <div class="articles__container">
+    
       <div
         v-for="(article, index) in getArticles"
         :class="'articles__item-' + index"
         :key="index"
       >
+      
         <RouterLink
           :to="{ name: 'article', params: { article_id: article.slug } }"
           class="articles__link"
         >
-          <div :class="'articles__title-' + index">
+          
             {{ article.title }}
-          </div>
+          
         </RouterLink>
 
         <div :class="'articles__lead-' + index">
@@ -29,8 +30,8 @@
           />
         </figure>
       </div>
-    </div>
-  </div>
+    
+  
 </template>
 
 <script>
@@ -44,6 +45,7 @@ export default {
 </script>
 
 <style>
+/* 
 .articles {
   position: relative;
   width: 100%;
@@ -64,7 +66,7 @@ export default {
 
 .articles__item-0 {
   grid-area: a;
-  flex-
+  
 }
 
 .articles__title-0 {
@@ -238,4 +240,5 @@ export default {
     padding: 20 60 0 60;
   }
 }
+ */
 </style>

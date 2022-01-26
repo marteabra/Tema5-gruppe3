@@ -21,4 +21,9 @@
     --body-font-size-small: 1rem;
     --body-line-height-small: 1.7rem;
 
+    --section-padding: 100px 0 40px 0;
+    --heading-padding: 100px 0 20px 0;
+    --ingress-padding-bottom: 20px;
+    
+
 }

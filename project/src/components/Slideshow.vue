@@ -1,5 +1,5 @@
 <template>
-	<div class="slideshow__heading">Journal</div>
+	<div class="section__header">Journal</div>
 	<div class="slideshow">
 		
 		<figure class="slideshow__slide" :data-text-after="currentSlide.caption">
