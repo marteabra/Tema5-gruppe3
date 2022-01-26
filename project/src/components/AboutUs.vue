@@ -17,7 +17,7 @@
             return this.$store.state.pages;
          },
 
-         titles() {
+         title() {
             return this.$store.state.pages[0].content.title;
          },
 
