@@ -1,32 +1,35 @@
 <template>
-    <div v-for="p in pages">
-        <h1>
-            {{ p[0].content.title }}
-        </h1>
+   <h1 class="page__title">
+      {{ title }}
+   </h1>
 
-        <p>
-            {{ p[0].content.body }}
-        </p>
-    </div>
+   <div class="page__container">
+      <p v-for="(p, index) in body" :class="'page__' + index">
+      {{ p }}
+   </p>
+
+   </div>
+   
+
 </template>
 
 <script>
-export default {
-    computed: {
-        pages() {
+   export default {
+      computed: {
+         pages() {
             return this.$store.state.pages;
-        },
+         },
 
-        title() {
+         titles() {
             return this.$store.state.pages[0].content.title;
-        },
+         },
 
-        body() {
+         body() {
             return this.$store.state.pages[0].content.body;
-        },
-    },
-};
+         }
+      },
+   }
 </script>
-
 <style>
+
 </style>
