@@ -52,11 +52,6 @@ export default {
   margin-bottom: 150px;
 }
 
-.articles__news {
-  display: flex;
-  justify-content: center;
-}
-
 .articles__container {
   display: grid;
   grid-template-areas:
@@ -69,6 +64,7 @@ export default {
 
 .articles__item-0 {
   grid-area: a;
+  flex-
 }
 
 .articles__title-0 {
@@ -115,6 +111,8 @@ export default {
 .articles__lead-1 {
   font-size: var(--caption-font-size);
   line-height: var(--caption-line-height);
+  width: 40vw;
+  margin: auto;
 }
 
 .articles__item-2 {
