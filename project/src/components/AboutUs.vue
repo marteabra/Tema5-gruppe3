@@ -1,33 +1,32 @@
 <template>
-    <div v-for="page in pageContent" class="h1">
-        {{ page.content.title }}
-    </div>
-        <div>
-            {{ body }}
-        </div>
+   <h1 class="page__title">
+      {{ title }}
+   </h1>
+
+   <div class="page__container">
+      <p v-for="(p, index) in body" :class="'page__' + index">
+         {{ p }}
+      </p>
+   </div>
 </template>
 
 <script>
-    export default {
-        data() {
-            return {
-                body: [''],
-            };
-        },
+   export default {
+      computed: {
+         pages() {
+            return this.$store.state.pages;
+         },
 
-        computed: {
-            pageContent() {
-                return this.$store.getters.getPageContent;
-            },
-        },
+         title() {
+            return this.$store.state.pages[0].content.title;
+         },
 
-        mounted: function() {
-            this.body = this.$store.state.pages.content.body;
-            console.log(this.store);
-        },
-    }
+         body() {
+            return this.$store.state.pages[0].content.body;
+         }
+      },
+   }
 </script>
-
 <style>
 
 </style>
