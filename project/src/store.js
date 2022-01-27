@@ -23,7 +23,7 @@ export default {
                },
             },
          ],
-
+         
          /******** THIS CONTENT NEED TO BE HERE TO BE SHOWN IN Article COMPONENT (under construction) **********/
          articles: [ 
             {
@@ -72,7 +72,7 @@ export default {
                   caption: `Cosver of Obieg 12: “The Speed of Guccifer.” The studio of TV UNU in the Romanian city of Râmnicu Vâlcea (a.k.a. Hackerville). Photo: Nicoleta Moise.`
                },
             },
-         ],
+         ], 
 
          information: {
             address: `172 Classon Avenue. Brooklyn, NY 11205. USA`
@@ -85,13 +85,17 @@ export default {
    },
 
    getters: {
+      articles(state, slug){
+         return state.articles.find(article => article.slug === slug);
+      },
+
       getAddress(state) {
          return state.information;
       },
 
       getAnnouncement(state) {
          return state.announcement.message;
-      }
+      },
    },
 
    modules: {
