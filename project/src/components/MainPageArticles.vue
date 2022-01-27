@@ -1,37 +1,30 @@
 <template>
-  
-    <div class="section__header">Latest</div>
+  <div class="section__header">Latest</div>
 
-    
-      <div
-        v-for="(article, index) in getArticles"
-        :class="'articles__item-' + index"
-        :key="index"
-      >
-      
-        <RouterLink
-          :to="{ name: 'article', params: { article_id: article.slug } }"
-          class="articles__link"
-        >
-          
-            {{ article.title }}
-          
-        </RouterLink>
+  <div
+    v-for="(article, index) in getArticles"
+    :class="'articles__item-' + index"
+    :key="index"
+  >
+    <RouterLink
+      :to="{ name: 'article', params: { article_id: article.slug } }"
+      class="articles__link"
+    >
+      {{ article.title }}
+    </RouterLink>
 
-        <div :class="'articles__lead-' + index">
-          {{ article.lead }}
-        </div>
+    <div :class="'articles__lead-' + index">
+      {{ article.lead }}
+    </div>
 
-        <figure :class="'articles__figure-' + index">
-          <img
-            :src="article.preview.image"
-            :alt="article.preview.caption"
-            :class="'articles__image-' + index"
-          />
-        </figure>
-      </div>
-    
-  
+    <figure :class="'articles__figure-' + index">
+      <img
+        :src="article.preview.image"
+        :alt="article.preview.caption"
+        :class="'articles__image-' + index"
+      />
+    </figure>
+  </div>
 </template>
 
 <script>
