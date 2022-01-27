@@ -51,10 +51,4 @@ export default {
          ],
       }
    },
-
-   getters: {
-      getArticle(state) {
-         return state.articles;
-      },
-   },
 };

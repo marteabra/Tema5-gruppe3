@@ -8,6 +8,7 @@
         :class="'articles__item-' + index"
         :key="index"
       >
+      
         <RouterLink
           :to="{ name: 'article', params: { article_id: article.slug } }"
           class="articles__link"
