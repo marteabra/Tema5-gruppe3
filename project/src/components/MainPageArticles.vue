@@ -4,7 +4,7 @@
 
     <div class="articles__container">
       <div
-        v-for="(article, index) in getArticles"
+        v-for="(article, index) in articles"
         :class="'articles__item-' + index"
         :key="index"
       >
@@ -36,8 +36,8 @@
 <script>
 export default {
   computed: {
-    getArticles() {
-      return this.$store.getters.getArticle;
+    articles() {
+      return this.$store.state.articles;
     },
   },
 };
