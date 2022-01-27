@@ -24,6 +24,7 @@ export default {
             },
          ],
 
+         /******** THIS CONTENT NEED TO BE HERE TO BE SHOWN IN Article COMPONENT (under construction) **********/
          articles: [ 
             {
                title: 'The Institute of the Cosmos',
