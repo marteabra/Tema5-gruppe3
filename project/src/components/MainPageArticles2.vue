@@ -6,17 +6,18 @@
       :key="index"
       class="articles__wrapper"
     >
-    
-    <RouterLink :to="{ name: 'article', params: { article_id: article.slug } }">
       <div class="articles__wrapper__text">
-        <h2>{{ article.title }}</h2>
-        <span>{{ article.lead }}</span>
+        <RouterLink
+          :to="{ name: 'article', params: { article_id: article.slug } }"
+        >
+          <h2>{{ article.title }}</h2>
+          <span>{{ article.lead }}</span>
+        </RouterLink>
       </div>
-    </RouterLink>
 
       <img
         class="articles__img"
-        :src="'/project/public/images/' + article.preview.image"
+        :src="'' + article.preview.image"
         :alt="article.preview.caption"
       />
     </div>
