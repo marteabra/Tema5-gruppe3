@@ -5,7 +5,9 @@
       {{ information.address }}
     </div>
     <div class="footer__item">
-      <a href="/" class="footer__item-about">About us</a>
+      <RouterLink :to="{ name: 'aboutus' }" class="footer__item-about">
+        About us
+      </RouterLink>
 
       <div class="social-media-links">
         <a href="/" class="footer__item-instagram"> Instagram &nearr; </a>

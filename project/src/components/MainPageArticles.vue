@@ -1,62 +1,26 @@
 <template>
-
-  <div class="section__header">Latest</div>
-
-  <div
-    v-for="(article, index) in getArticles"
-    :class="'articles__item-' + index"
-    :key="index"
-  >
-    <RouterLink
-      :to="{ name: 'article', params: { article_id: article.slug } }"
-      class="articles__link"
-    >
-      {{ article.title }}
-    </RouterLink>
-
-    <div :class="'articles__lead-' + index">
-      {{ article.lead }}
-
+  <div class="section__header--padding">Latest</div>
   <div class="articles">
-    <div class="articles__news">Latest</div>
-
-    <div class="articles__container">
-      <div
-        v-for="(article, index) in articles"
-        :class="'articles__item-' + index"
-        :key="index"
-      >
-      
+    <div
+      v-for="(article, index) in articles"
+      :key="index"
+      class="articles__wrapper"
+    >
+      <div class="articles__wrapper__text">
         <RouterLink
           :to="{ name: 'article', params: { article_id: article.slug } }"
-          class="articles__link"
         >
-          <div :class="'articles__title-' + index">
-            {{ article.title }}
-          </div>
+          <h2>{{ article.title }}</h2>
+          <span>{{ article.lead }}</span>
         </RouterLink>
-
-        <div :class="'articles__lead-' + index">
-          {{ article.lead }}
-        </div>
-
-        <figure :class="'articles__figure-' + index">
-          <img
-            :src="article.preview.image"
-            :alt="article.preview.caption"
-            :class="'articles__image-' + index"
-          />
-        </figure>
       </div>
-    </div>
 
-    <figure :class="'articles__figure-' + index">
       <img
+        class="articles__img"
         :src="article.preview.image"
         :alt="article.preview.caption"
-        :class="'articles__image-' + index"
       />
-    </figure>
+    </div>
   </div>
 </template>
 
@@ -71,199 +35,73 @@ export default {
 </script>
 
 <style>
-/* 
 .articles {
-  position: relative;
-  width: 100%;
-  min-height: 100%;
-  top: 100px;
-  margin-bottom: 150px;
-}
-
-.articles__container {
   display: grid;
-  grid-template-areas:
-    "a a a a"
-    "b b c c";
-
-  margin-top: 40px;
-  margin-bottom: 100px;
-}
-
-.articles__item-0 {
-  grid-area: a;
-}
-
-.articles__title-0 {
-  display: flex;
-  justify-content: center;
-  font-size: var(--heading-font-size);
-  line-height: var(--heading-line-height);
-}
-
-.articles__lead-0 {
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 0 12px;
   text-align: center;
-  max-width: 809px;
-  margin: 0 auto;
-  font-size: var(--caption-font-size);
-  line-height: var(--caption-line-height);
 }
 
-.articles__figure-0 {
-  display: flex;
-  justify-content: center;
-}
+/* DESKTOP */
+@media screen and (min-width: 968px) {
+  /* MAIN ARTICLE (1) */
+  .articles > div:first-child {
+    grid-column: 3 / 11;
 
-.articles__image-0 {
-  max-width: 70vw;
-  margin: 40 0 40 0;
-}
-
-.articles__item-1 {
-  grid-area: b;
-  padding: 20 6 0 20;
-  text-align: center;
-  width: 50vw;
-}
-
-.articles__image-1 {
-  margin: 25 0 40 0;
-}
-
-.articles__title-1 {
-  font-size: var(--heading-font-size);
-  line-height: var(--heading-line-height);
-}
-
-.articles__lead-1 {
-  font-size: var(--caption-font-size);
-  line-height: var(--caption-line-height);
-  width: 40vw;
-  margin: auto;
-}
-
-.articles__item-2 {
-  grid-area: c;
-  text-align: center;
-  width: 50vw;
-}
-
-.articles__image-2 {
-  margin: 25 0 40 0;
-  padding: 0 20 0 0;
-}
-
-.articles__title-2 {
-  font-size: var(--heading-font-size);
-  line-height: var(--heading-line-height);
-}
-
-.articles__lead-2 {
-  font-size: var(--caption-font-size);
-  line-height: var(--caption-line-height);
-}
-
-.articles__link {
-  text-decoration: none;
-  color: var(--primary);
-}
-
-@media screen and (max-width: 968px) {
-  .articles__container {
+    /* SUBGRID MAIN ARTICLE */
     display: grid;
-    grid-template-areas:
-      "a"
-      "b"
-      "c";
-
-    margin-top: 40px;
+    grid-template-columns: repeat(8, 1fr);
+    grid-gap: 0 12px;
   }
 
-  .articles__item-0 {
-    width: 100vw;
+  /* MAIN ARTICLE TEXT WRAPPER */
+  .articles :first-child > div {
+    grid-column: 2 / 8;
   }
 
-  .articles__title-0 {
-    text-align: center;
+  /* MAIN ARTICLE IMG */
+  .articles :first-child > img {
+    grid-column: 1 / 9;
   }
 
-  .articles__lead-0 {
-    max-width: 928px;
-    padding: 0;
+  /* LEFT SIDE SMALLER ARTICLES (2,4,6...) */
+  .articles > div:nth-child(even) {
+    grid-column: 1 / 7;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 0 12px;
   }
 
-  .articles__image-0 {
-    max-width: 100vw;
-    margin: 20 0 20 0;
+  /* RIGHT SIDE SMALLER ARTICLES (3,5,7...) */
+  .articles > div:nth-child(2n + 3) {
+    grid-column: 7 / 13;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 0 12px;
   }
 
-  .articles__item-1 {
-    width: 100vw;
-    padding: 0;
-    margin-top: 30px;
+  /* TEXT WRAPPER SMALL ARTICLES (ODD + EVEN) */
+  .articles > div:nth-child(even) > div,
+  .articles > div:nth-child(2n + 3) > div {
+    grid-column: 2 / 6;
   }
 
-  .articles__lead-1 {
-    max-width: 932px;
-    padding: 0;
-    margin: 0;
-  }
-
-  .articles__image-1 {
-    max-width: 100vw;
-    margin: 20 0 20 0;
-  }
-
-  .articles__item-2 {
-    width: 100vw;
-    padding: 0;
-    margin-top: 30px;
-  }
-
-  .articles__lead-2 {
-    max-width: 928px;
-    padding: 0;
-  }
-
-  .articles__image-2 {
-    max-width: 100vw;
-    padding: 0 20 0 20;
+  /* img SMALL ARTICLES (ODD + EVEN) */
+  .articles > div:nth-child(even) > img,
+  .articles > div:nth-child(2n + 3) > img {
+    grid-column: 1 / 7;
   }
 }
 
-@media screen and (max-width: 1300px) {
-  .articles__title-0 {
-    font-size: var(--heading-font-size-small);
-    line-height: var(--heading-line-height-small);
-  }
-
-  .articles__lead-0 {
-    font-size: var(--body-font-size-small);
-    line-height: var(--body-line-height-small);
-    width: 50vw;
-  }
-
-  .articles__title-1 {
-    font-size: var(--heading-font-size-small);
-    line-height: var(--heading-line-height-small);
-  }
-  .articles__lead-1 {
-    font-size: var(--body-font-size-small);
-    line-height: var(--body-line-height-small);
-    padding: 0 55 0 55;
-  }
-
-  .articles__title-2 {
-    font-size: var(--heading-font-size-small);
-    line-height: var(--heading-line-height-small);
-    padding: 0 60 0 60;
-  }
-
-  .articles__lead-2 {
-    font-size: var(--body-font-size-small);
-    line-height: var(--body-line-height-small);
-    padding: 20 60 0 60;
+/* MOBILE */
+@media screen and (max-width: 968px) {
+  .articles__wrapper {
+    grid-column: span 12;
   }
 }
- */
+
+.articles__wrapper > img {
+  padding-top: 40px;
+  padding-bottom: 100px;
+}
 </style>
