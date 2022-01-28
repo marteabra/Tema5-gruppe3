@@ -25,13 +25,13 @@
          </p>
       </article>
    </div>
-   
+
    <Footer />
 </template>
 
 <script>
 import Header from '../components/Header.vue';
-import Announcement from './Announcement.vue';
+import Announcement from '../components/Announcement.vue';
 import Footer from '../components/Footer.vue';
 
 export default {
