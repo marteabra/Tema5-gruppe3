@@ -85,10 +85,6 @@ export default {
    },
 
    getters: {
-      articles(state, slug){
-         return state.articles.find(article => article.slug === slug);
-      },
-
       getAddress(state) {
          return state.information;
       },
