@@ -39,7 +39,7 @@ export default {
                   `Despite our meagre budget, we managed to increase our fees for authors—regardless of their celebrity status or passport—as well as the fees for translators, guest editors, and all freelancers involved, to increase our reach and international community. Because of this, I believe, we were successful. After writing an essay for Obieg, someone from Lagos was granted a stipend in Johannesburg. Someone else came up with the idea of a biennial in northern Chile. New projects were conceived in Kyiv, Rijeka, Vilnius, and many other places. Channeled through Warsaw, people and ideas connected in fruitful collaboration.`,
                ],
                preview: {
-                  image: 'public/images/article_1.jpeg',
+                  image: 'images/article_1.jpeg',
                   caption: `Liz Craft, She is looking at me, 2015. Ceramic, aluminium, 84 x 82 x 12 cm.`
                },
             },
