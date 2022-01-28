@@ -7,13 +7,11 @@
     <div class="footer__item">
       <a href="/" class="footer__item-about">About us</a>
 
-      <a href="/" class="footer__item-instagram">
-        Instagram <i class="fas fa-arrow-up"></i>
-      </a>
+      <div class="social-media-links">
+        <a href="/" class="footer__item-instagram"> Instagram &nearr; </a>
 
-      <a href="/" class="footer__item-twitter">
-        Twitter <i class="fas fa-arrow-up"></i>
-      </a>
+        <a href="/" class="footer__item-twitter"> Twitter &nearr; </a>
+      </div>
 
       <a href="/" class="footer__item-mail">in@dex.info</a>
     </div>
@@ -31,14 +29,12 @@ export default {
 </script>
 
 <style>
-
-
 .footer {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 0 12px;
   width: 100%;
-  margin-top: auto;
+  margin-bottom: 10px;
 }
 
 .footer__logo {
@@ -50,6 +46,11 @@ export default {
 }
 .footer__item {
   grid-column: 10 / 12;
+  padding: 0 1rem 0 1rem;
+}
+
+.social-media-links {
+  margin: 15 0 15 0;
 }
 
 @media screen and (max-width: 968px) {
@@ -60,46 +61,4 @@ export default {
     display: none;
   }
 }
-
-
-/* 
-footer {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  justify-content: space-between;
-  padding: 0 80 20 10;
-}
-
-.footer__address {
-  max-width: 16%;
-  margin-left: 400px;
-  text-decoration: none;
-}
-
-.footer__item {
-  display: grid;
-}
-
-.footer__item a {
-  text-decoration: none;
-  color: black;
-}
-
-.footer__item-instagram {
-  margin-top: 20px;
-}
-
-.footer__item-twitter {
-  margin-bottom: 20px;
-}
-
-.fa-arrow-up {
-  transform: rotate(50deg);
-}
- */
-
-
-
 </style>

@@ -10,6 +10,9 @@ const app_store = createStore(store);
 
 const router = createRouter({
    routes: routes,
+   scrollBehavior() {
+      window.scrollTo(0,0);
+   },
    history: createWebHistory()
 })
 

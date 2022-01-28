@@ -13,10 +13,6 @@
 <script>
    export default {
       computed: {
-         pages() {
-            return this.$store.state.pages;
-         },
-
          title() {
             return this.$store.state.pages[0].content.title;
          },

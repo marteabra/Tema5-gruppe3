@@ -27,6 +27,7 @@ export default {
          /******** THIS CONTENT NEED TO BE HERE TO BE SHOWN IN Article COMPONENT (under construction) **********/
          articles: [ 
             {
+               author: 'Krzysztof Gutfranski',
                title: 'The Institute of the Cosmos',
                slug: 'the-institute-of-the-cosmos',
                lead: 'The Institute of the Cosmos is an ongoing collective research project founded in 2019. Informed by the historical ideas of Russian Cosmism, the Institute is a space for a creative investigation of the materiality of the cosmos and its strange universalism, from the perspectives of philosophy, anthropology, history of science, and art.',
@@ -58,6 +59,7 @@ export default {
                }
             },
             {
+               author: 'Daniel Birnbaum',
                title: 'Mutual Aid, Social Distancing, and Dual Power in the State of Emergency',
                slug: 'mutual-aid-social-distancing-and-dual-power-in-the-state-of-emergency',
                lead: `For the elites, this might be an ungovernable world. But we still have many worlds to propagate, to live and love in comradely care.`,
