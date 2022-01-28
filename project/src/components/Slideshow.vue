@@ -58,6 +58,7 @@ export default {
 </script>
 
 <style>
+/*	slideshow container */
 .slideshow {
   position: relative;
   width: 100vw;
@@ -70,6 +71,7 @@ export default {
   margin: 10px;
 }
 
+/*	slideshow content	*/
 .slideshow__slide {
   position: relative;
   width: 100vw;
