@@ -3,12 +3,19 @@
    <Announcement />
 
    <div v-if="article">
+      <h3>
+         {{ article.author }}
+      </h3>
+
       <h1>
          {{ article.title }}
       </h1>
 
       <figure>
-         <img :src="article.preview.image" />
+         <img :src="article.preview.image" :alt="article.preview.caption" />
+         <figcaption>
+            {{ article.preview.caption }}
+         </figcaption>
       </figure>
 
       <article>
@@ -27,32 +34,22 @@ import Header from '../components/Header.vue';
 import Announcement from './Announcement.vue';
 import Footer from '../components/Footer.vue';
 
-   export default {
-      components: {
-         Header,
-         Announcement,
-         Footer,
-      },
+export default {
+   components: {
+      Header,
+      Announcement,
+      Footer,
+   },
 
-      props: [
-         'article_id',
-      ],
+   props: [
+      'article_id',
+   ],
 
-      created() {
-         this.article = this.$store.state.articles.find((article) => {
-            return article.slug === this.article_id
-         });
-      },
-
-/*
-      mounted: function() {
-         this.articles = this.$store.state.articles;
-         this.author = this.$store.state.articles.author;
-         this.title =  this.$store.state.articles.title;
-         this.body = this.$store.state.articles.body;
-         this.image = this.$store.state.articles.preview.image;
-      },
-*/
+   created() {
+      this.article = this.$store.state.articles.find((article) => {
+         return article.slug === this.article_id
+      });
+   },
 };
 </script>
 
