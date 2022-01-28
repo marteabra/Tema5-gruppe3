@@ -2,14 +2,18 @@
   <div class="section__header--padding">Latest</div>
   <div class="articles">
     <div
-      v-for="(article, index) in getArticles"
+      v-for="(article, index) in articles"
       :key="index"
       class="articles__wrapper"
     >
+    
+    <RouterLink :to="{ name: 'article', params: { article_id: article.slug } }">
       <div class="articles__wrapper__text">
         <h2>{{ article.title }}</h2>
         <span>{{ article.lead }}</span>
       </div>
+    </RouterLink>
+
       <img
         class="articles__img"
         :src="'/project/public/images/' + article.preview.image"
@@ -22,8 +26,8 @@
 <script>
 export default {
   computed: {
-    getArticles() {
-      return this.$store.getters.getArticle;
+    articles() {
+      return this.$store.state.articles;
     },
   },
 };
