@@ -10,7 +10,17 @@
         aria-label="open navigation menu"
         class="header__menu"
       >
-        <i class="fas fa-bars"></i>
+        <svg
+          width="44"
+          height="26"
+          viewBox="0 0 44 26"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M0 1H44" stroke="black" stroke-width="2" />
+          <path d="M0 13H44" stroke="black" stroke-width="2" />
+          <path d="M0 25H44" stroke="black" stroke-width="2" />
+        </svg>
       </button>
 
       <ul v-if="menuVisible" class="header__open">
@@ -40,7 +50,22 @@
         aria-label="open searchbar"
         class="header__search"
       >
-        <i class="fas fa-search"></i>
+        <svg
+          width="31"
+          height="31"
+          viewBox="0 0 31 31"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="11.5"
+            cy="11.5"
+            r="10.5"
+            stroke="black"
+            stroke-width="2"
+          />
+          <path d="M19 19L30 30" stroke="black" stroke-width="2" />
+        </svg>
       </button>
 
       <div v-if="searchVisible" class="header__container">
@@ -128,6 +153,10 @@ export default {
   margin: 5px 10px 0 0;
 }
 
+.header__search {
+  padding-right: 16px;
+}
+
 .header__open {
   width: 100%;
   /* height: 220px; */
@@ -153,6 +182,7 @@ export default {
 
 .header__item-twitter {
   position: absolute;
+
   top: 85%;
   left: 65%;
 }
@@ -195,5 +225,14 @@ export default {
   cursor: pointer;
   color: var(--primary);
   font-size: 30px;
+}
+
+.fa-arrow-up {
+  -webkit-text-stroke: 1px var(--secondary);
+  transform: rotate(50deg);
+}
+
+.header__svg {
+  margin-left: 12px;
 }
 </style>
