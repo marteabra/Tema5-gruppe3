@@ -1,4 +1,5 @@
 <template>
+
   <div class="section__header">Latest</div>
 
   <div
@@ -15,6 +16,38 @@
 
     <div :class="'articles__lead-' + index">
       {{ article.lead }}
+
+  <div class="articles">
+    <div class="articles__news">Latest</div>
+
+    <div class="articles__container">
+      <div
+        v-for="(article, index) in articles"
+        :class="'articles__item-' + index"
+        :key="index"
+      >
+      
+        <RouterLink
+          :to="{ name: 'article', params: { article_id: article.slug } }"
+          class="articles__link"
+        >
+          <div :class="'articles__title-' + index">
+            {{ article.title }}
+          </div>
+        </RouterLink>
+
+        <div :class="'articles__lead-' + index">
+          {{ article.lead }}
+        </div>
+
+        <figure :class="'articles__figure-' + index">
+          <img
+            :src="article.preview.image"
+            :alt="article.preview.caption"
+            :class="'articles__image-' + index"
+          />
+        </figure>
+      </div>
     </div>
 
     <figure :class="'articles__figure-' + index">
@@ -30,8 +63,8 @@
 <script>
 export default {
   computed: {
-    getArticles() {
-      return this.$store.getters.getArticle;
+    articles() {
+      return this.$store.state.articles;
     },
   },
 };
@@ -59,7 +92,6 @@ export default {
 
 .articles__item-0 {
   grid-area: a;
-  
 }
 
 .articles__title-0 {

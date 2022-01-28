@@ -1,7 +1,7 @@
 <template>
-<Header />
-<AboutUs />
-<Footer />
+  <Header />
+  <AboutUs />
+  <Footer />
 </template>
 
 
