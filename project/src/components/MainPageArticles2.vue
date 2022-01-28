@@ -42,10 +42,6 @@ export default {
   text-align: center;
 }
 
-.section__header--padding {
-  padding-top: 100px;
-}
-
 /* DESKTOP */
 @media screen and (min-width: 968px) {
   /* MAIN ARTICLE (1) */

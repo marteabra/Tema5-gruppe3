@@ -1,6 +1,5 @@
 <template>
-  <div class="slideshow__heading">Journal</div>
-  <div class="slideshow">
+
     <figure class="slideshow__slide" :data-text-after="currentSlide.caption">
       <img
         class="slideshow__img"
@@ -61,7 +60,7 @@ export default {
 /*	slideshow container */
 .slideshow {
   position: relative;
-  width: 100vw;
+
   height: 100%;
   margin: auto;
 }
@@ -73,14 +72,13 @@ export default {
 
 /*	slideshow content	*/
 .slideshow__slide {
-  position: relative;
-  width: 100vw;
+
   height: auto;
   cursor: pointer;
 }
 
 .slideshow__img {
-  width: 100vw;
+
   height: 100%;
   object-fit: contain;
 }
