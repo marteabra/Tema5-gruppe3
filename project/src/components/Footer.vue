@@ -7,13 +7,15 @@
     <div class="footer__item">
       <a href="/" class="footer__item-about">About us</a>
 
-      <a href="/" class="footer__item-instagram">
-        Instagram <i class="fas fa-arrow-up"></i>
-      </a>
+      <div class="social-media-links">
+        <a href="/" class="footer__item-instagram">
+          Instagram <i class="fas fa-arrow-up"></i>
+        </a>
 
-      <a href="/" class="footer__item-twitter">
-        Twitter <i class="fas fa-arrow-up"></i>
-      </a>
+        <a href="/" class="footer__item-twitter">
+          Twitter <i class="fas fa-arrow-up"></i>
+        </a>
+      </div>
 
       <a href="/" class="footer__item-mail">in@dex.info</a>
     </div>
@@ -31,14 +33,12 @@ export default {
 </script>
 
 <style>
-
-
 .footer {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 0 12px;
   width: 100%;
-  margin-top: auto;
+  margin-bottom: 0;
 }
 
 .footer__logo {
@@ -50,6 +50,11 @@ export default {
 }
 .footer__item {
   grid-column: 10 / 12;
+  padding: 0 1rem 0 1rem;
+}
+
+.social-media-links {
+  margin: 15 0 15 0;
 }
 
 @media screen and (max-width: 968px) {
@@ -60,7 +65,6 @@ export default {
     display: none;
   }
 }
-
 
 /* 
 footer {
@@ -99,7 +103,4 @@ footer {
   transform: rotate(50deg);
 }
  */
-
-
-
 </style>
