@@ -34,7 +34,7 @@ export default {
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 0 12px;
   width: 100%;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 
 .footer__logo {
