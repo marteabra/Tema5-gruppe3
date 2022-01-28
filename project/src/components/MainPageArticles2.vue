@@ -16,7 +16,7 @@
 
       <img
         class="articles__img"
-        :src="'/project/public/images/' + article.preview.image"
+        :src="article.preview.image"
         :alt="article.preview.caption"
       />
     </div>
