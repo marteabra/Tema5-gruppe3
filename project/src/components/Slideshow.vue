@@ -58,10 +58,9 @@ export default {
 </script>
 
 <style>
-/*	slideshow container */
 .slideshow {
   position: relative;
-  width: 100vw;
+  width: 98%;
   height: 100%;
   margin: auto;
 }
@@ -71,16 +70,14 @@ export default {
   margin: 10px;
 }
 
-/*	slideshow content	*/
 .slideshow__slide {
-  position: relative;
-  width: 100vw;
+  width: 100%;
   height: auto;
   cursor: pointer;
 }
 
 .slideshow__img {
-  width: 100vw;
+  width: 100%;
   height: 100%;
   object-fit: contain;
 }
