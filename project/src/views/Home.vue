@@ -1,43 +1,50 @@
 <template>
   <Header />
   <Announcement />
-  <MainPageArticles />
-  <Books />
-  <Slideshow />
   <Subscribe />
-  <Footer />
+  <div class="grid">
+    <MainPageArticles2 />
+    <Books />
+    <Slideshow />
+
+    <Footer />
+  </div>
 </template>
 
 <script>
 import Header from "../components/Header.vue";
 import Announcement from "../components/Announcement.vue";
-import MainPageArticles from "../components/MainPageArticles.vue";
+import MainPageArticles2 from "../components/MainPageArticles2.vue";
 import Footer from "../components/Footer.vue";
 import Slideshow from "../components/Slideshow.vue";
-import Books from '../components/Books.vue';
-import Subscribe from '../components/Subscribe.vue';
+import Books from "../components/Books.vue";
+import Subscribe from "../components/Subscribe.vue";
 
 export default {
   components: {
     Header,
     Announcement,
-    MainPageArticles,
+    MainPageArticles2,
     Slideshow,
     Footer,
     Books,
-    Subscribe
+    Subscribe,
   },
 };
 </script>
 
 <style>
-  Header {
-    z-index: 1;
-  }
+.articles {
+  grid-column: span 12;
+}
 
-  Footer {
-    position: relative;
-    margin-top: 280px;
-    bottom: 0;
-  }
+Header {
+  z-index: 1;
+}
+
+Footer {
+  position: relative;
+  margin-top: 280px;
+  bottom: 0;
+}
 </style>

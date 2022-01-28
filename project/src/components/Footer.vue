@@ -31,6 +31,38 @@ export default {
 </script>
 
 <style>
+
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 0 12px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.footer__logo {
+  grid-column: 1 / 6;
+}
+
+.footer__address {
+  grid-column: 7 / 9;
+}
+.footer__item {
+  grid-column: 10 / 12;
+}
+
+@media screen and (max-width: 968px) {
+  .footer__item {
+    grid-column: 6 / 12;
+  }
+  .footer__address {
+    display: none;
+  }
+}
+
+
+/* 
 footer {
   display: flex;
   position: absolute;
@@ -66,10 +98,8 @@ footer {
 .fa-arrow-up {
   transform: rotate(50deg);
 }
+ */
 
-@media screen and (max-width: 930px) {
-  .footer__address {
-    display: none;
-  }
-}
+
+
 </style>

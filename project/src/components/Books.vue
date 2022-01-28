@@ -1,6 +1,6 @@
 <template>
-  <div class="books__heading">Books</div>
-  <div class="books__container">
+  <div class="section__header">Books</div>
+  
     <div v-for="(book, index) in books" class="header__item">
       <figure :class="'books__figure-' + index">
         <img
@@ -12,7 +12,7 @@
         <div>{{ book.title }}</div>
       </figure>
     </div>
-  </div>
+  
 </template>
 
 <script>
@@ -26,6 +26,7 @@ export default {
 </script>
 
 <style>
+/* 
 .books__heading {
   text-align: center;
   margin: 10px;
@@ -71,4 +72,5 @@ export default {
     grid-template-areas: "a b c" "d e f";
   }
 }
+ */
 </style>
