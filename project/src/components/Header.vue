@@ -5,11 +5,8 @@
         in(dex)
       </RouterLink>
 
-      <button
-        @click="displayMenu"
-        aria-label="open navigation menu"
-        class="header__menu"
-      >
+      <button @click="displayMenu" aria-label="open navigation menu" class="header__menu">
+
         <svg
           width="44"
           height="26"
@@ -31,18 +28,16 @@
         <div class="header__mobile">
           <li class="header__item-about">
             <RouterLink :to="{ name: 'aboutus' }">
-            About us
+              About us
             </RouterLink>
           </li>
 
           <li class="header__item-instagram">
-            Instagram
-            <i class="fas fa-arrow-up"></i>
+            Instagram &nearr;   
           </li>
 
           <li class="header__item-twitter">
-            Twitter
-            <i class="fas fa-arrow-up"></i>
+            Twitter &nearr;
           </li>
 
           <li class="header__item-mail">in@dex.info</li>
@@ -163,7 +158,6 @@ export default {
 
 .header__open {
   width: 100%;
-  /* height: 220px; */
   background-color: var(--secondary);
 }
 
@@ -186,7 +180,6 @@ export default {
 
 .header__item-twitter {
   position: absolute;
-
   top: 85%;
   left: 65%;
 }
@@ -217,23 +210,6 @@ export default {
   border: none;
   border-bottom-style: groove;
   background-color: transparent;
-}
-
-.fa-search {
-  cursor: pointer;
-  color: var(--primary);
-  font-size: 30px;
-}
-
-.fa-bars {
-  cursor: pointer;
-  color: var(--primary);
-  font-size: 30px;
-}
-
-.fa-arrow-up {
-  -webkit-text-stroke: 1px var(--secondary);
-  transform: rotate(50deg);
 }
 
 .header__svg {

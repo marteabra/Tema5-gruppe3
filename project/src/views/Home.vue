@@ -6,7 +6,6 @@
     <MainPageArticles />
     <Books />
     <Slideshow />
-
     <Footer />
   </div>
 </template>
