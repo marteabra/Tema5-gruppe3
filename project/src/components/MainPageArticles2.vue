@@ -17,7 +17,11 @@
 
       <img
         class="articles__img"
+
         :src="'' + article.preview.image"
+
+        :src="article.preview.image"
+
         :alt="article.preview.caption"
       />
     </div>
