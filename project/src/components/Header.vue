@@ -29,7 +29,11 @@
         </li>
 
         <div class="header__mobile">
-          <li class="header__item-about">About us</li>
+          <li class="header__item-about">
+            <RouterLink :to="{ name: 'aboutus' }">
+            About us
+            </RouterLink>
+          </li>
 
           <li class="header__item-instagram">
             Instagram
