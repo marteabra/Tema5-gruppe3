@@ -45,6 +45,11 @@ export default {
 /* DESKTOP */
 @media screen and (min-width: 968px) {
   /* MAIN ARTICLE (1) */
+  /*.articles > div:nth-child(3) h2 {
+    width: 42vw;
+    margin-left: -5vw;
+  }*/
+
   .articles > div:first-child {
     grid-column: 3 / 11;
 
@@ -83,7 +88,8 @@ export default {
   /* TEXT WRAPPER SMALL ARTICLES (ODD + EVEN) */
   .articles > div:nth-child(even) > div,
   .articles > div:nth-child(2n + 3) > div {
-    grid-column: 2 / 6;
+    grid-column: 1 / 9;
+    padding: 0 45 0 45;
   }
 
   /* img SMALL ARTICLES (ODD + EVEN) */

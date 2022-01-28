@@ -39,6 +39,10 @@ h2 {
   .header__item {
     grid-column: span 4;
   }
+
+.books__item {
+    grid-column: span 4;
+  }
 }
 
 .section__header,
@@ -56,3 +60,5 @@ h2 {
 .section__header--padding {
   padding-top: 100px;
 }
+
+
