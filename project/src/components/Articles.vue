@@ -2,7 +2,7 @@
    <Header />
    <Announcement />
 
-   <div v-if="article">
+   <div v-if="article" class="article">
       <h3 class="article__author">
          {{ article.author }}
       </h3>
@@ -19,7 +19,7 @@
       </figure>
 
       <article class="article__content">
-         <p v-for="(p, index) in article.body" :class="'article__paragraph' + index">
+         <p v-for="p in article.body">
             <br /> 
             {{ p }}
          </p>
@@ -55,4 +55,32 @@ export default {
 
 
 <style>
+.article {
+   padding: 50px 0 0 0;
+}
+
+.article__author {
+   font-size: var(--body-font-size);
+   margin: 0 20px 0 20px;
+}
+
+.article__title {
+   font-size: var(--heading-font-size);
+   line-height: var(--heading-line-height);
+   margin: 0 20px 0 20px;
+}
+
+.article__image {
+   width: 100vw;
+   height: 100vh;
+}
+
+
+.article__content {
+   width: 65vw;
+   margin: 0 auto;
+   font-size: var(--body-font-size);
+   line-height: var(--body-line-height);
+}
+
 </style>
