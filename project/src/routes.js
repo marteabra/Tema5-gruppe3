@@ -1,9 +1,9 @@
 import Home       from './views/Home.vue';
 import Articles   from './views/Articles.vue';
-import Page       from './views/Page.vue'
+import AboutUs    from './views/AboutUs.vue'
 
 export default [
       { name: 'article',      path: '/:article_id',   props: true,    component: Articles },
-      { name: 'page',         path: '/page',                                  component: Page },
-      { name: 'home',         path: '/',                                      component: Home},
+      { name: 'aboutus',      path: '/about-us',                      component: AboutUs },
+      { name: 'home',         path: '/',                              component: Home},
 ]

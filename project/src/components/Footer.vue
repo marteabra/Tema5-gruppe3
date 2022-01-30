@@ -1,19 +1,25 @@
 <template>
   <footer class="footer">
-    <div class="footer__logo">in(dex)</div>
-    <div href="/" class="footer__address" v-for="address in information">
-      {{ information.address }}
+    <div class="footer__logo">
+      in(dex)
     </div>
+
+    <a href="/" class="footer__address" v-for="address in information">
+      {{ information.address }}
+    </a>
+
     <div class="footer__item">
-      <a href="/" class="footer__item-about">About us</a>
+      <RouterLink :to="{ name: 'aboutus' }" class="footer__item-about">
+        About us
+      </RouterLink>
 
-      <div class="social-media-links">
-        <a href="/" class="footer__item-instagram"> Instagram &nearr; </a>
+      <div class="footer__social-media">
+        <a href="/" class="footer__instagram"> Instagram &nearr; </a>
 
-        <a href="/" class="footer__item-twitter"> Twitter &nearr; </a>
+        <a href="/" class="footer__twitter"> Twitter &nearr; </a>
       </div>
 
-      <a href="/" class="footer__item-mail">in@dex.info</a>
+      <a href="/" class="footer__mail">in@dex.info</a>
     </div>
   </footer>
 </template>
@@ -49,7 +55,7 @@ export default {
   padding: 0 1rem 0 1rem;
 }
 
-.social-media-links {
+.footer__social-media {
   margin: 15 0 15 0;
 }
 
