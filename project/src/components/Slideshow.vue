@@ -95,12 +95,12 @@ export default {
 .slideshow__slide::after {
   position: absolute;
   top: 50%;
-  margin-top: -10%;
+  margin-top: -8%;
   left: 50%;
   margin-left: -35%;
   width: 70%;
   text-align: center;
-  font-size: var(--heading-font-size);
+  font-size: 3vw;
   color: white;
   font-weight: 400;
   content: attr(data-text-after);
@@ -122,8 +122,8 @@ export default {
 
 .slideshow__dot {
   cursor: pointer;
-  min-width: 0.8em;
-  min-height: 0.8em;
+  width: 0.8em;
+  height: 0.8em;
   display: block;
   border: 1px solid white;
   border-radius: 100%;
@@ -137,4 +137,5 @@ export default {
 .slideshow__dot + .slideshow__dot {
   margin-left: 0.5em;
 }
+
 </style>
