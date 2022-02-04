@@ -1,5 +1,5 @@
 <template>
-  <Header />
+  <Header_v2 />
   <Announcement />
   <Subscribe />
   <div class="grid">
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Header from "../components/Header.vue";
+import Header_v2 from "../components/Header_v2.vue";
 import Announcement from "../components/Announcement.vue";
 import MainPageArticles from "../components/MainPageArticles.vue";
 import Footer from "../components/Footer.vue";
@@ -21,7 +21,7 @@ import Subscribe from "../components/Subscribe.vue";
 
 export default {
   components: {
-    Header,
+    Header_v2,
     Announcement,
     MainPageArticles,
     Slideshow,

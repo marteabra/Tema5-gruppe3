@@ -1,86 +1,104 @@
 <template>
-   <Header />
-   <Announcement />
+  <Header_v2 />
+  <Announcement />
 
-   <div v-if="article" class="article">
-      <h3 class="article__author">
-         {{ article.author }}
-      </h3>
+  <div v-if="article" class="article">
+    <h3 class="article__author">
+      {{ article.author }}
+    </h3>
 
-      <h1 class="article__title">
-         {{ article.title }}
-      </h1>
+    <h1 class="article__title">
+      {{ article.title }}
+    </h1>
 
-      <figure class="article__container">
-         <img :src="article.preview.image" :alt="article.preview.caption" class="article__image" />
-         <figcaption class="article__details">
-            {{ article.preview.caption }}
-         </figcaption>
-      </figure>
+    <figure class="article__container">
+      <img
+        :src="article.preview.image"
+        :alt="article.preview.caption"
+        class="article__image"
+      />
+      <figcaption class="article__details">
+        {{ article.preview.caption }}
+      </figcaption>
+    </figure>
 
-      <article class="article__content">
-         <p v-for="p in article.body">
-            <br /> 
-            {{ p }}
-         </p>
-      </article>
-   </div>
+    <article class="article__content">
+      <p v-for="p in article.body">
+        <br />
+        {{ p }}
+      </p>
+    </article>
+  </div>
 
-   <Footer />
+  <Footer />
 </template>
 
 <script>
-import Header from '../components/Header.vue';
-import Announcement from '../components/Announcement.vue';
-import Footer from '../components/Footer.vue';
+import Header_v2 from "../components/Header_v2.vue";
+import Announcement from "../components/Announcement.vue";
+import Footer from "../components/Footer.vue";
 
 export default {
-   components: {
-      Header,
-      Announcement,
-      Footer,
-   },
+  components: {
+    Header_v2,
+    Announcement,
+    Footer,
+  },
 
-   props: [
-      'article_id',
-   ],
+  props: ["article_id"],
 
-   created() {
-      this.article = this.$store.state.articles.find((article) => {
-         return article.slug === this.article_id
-      });
-   },
+  created() {
+    this.article = this.$store.state.articles.find((article) => {
+      return article.slug === this.article_id;
+    });
+  },
 };
 </script>
 
-
 <style>
 .article {
-   padding: 50px 0 0 0;
+  padding: 65px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 0 12px;
 }
 
 .article__author {
-   font-size: var(--body-font-size);
-   margin: 0 20px 0 20px;
+  font-size: var(--body-font-size);
+}
+
+.article__title,
+.article__author {
+  grid-column: 2 / 13;
+}
+
+.article__container {
+  grid-column: span 12;
 }
 
 .article__title {
-   font-size: var(--heading-font-size);
-   line-height: var(--heading-line-height);
-   margin: 0 20px 0 20px;
+  font-size: var(--heading-font-size);
+  line-height: var(--heading-line-height);
+  padding-bottom: 40px;
 }
 
 .article__image {
-   width: 100vw;
-   height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
-
 
 .article__content {
-   width: 65vw;
-   margin: 0 auto;
-   font-size: var(--body-font-size);
-   line-height: var(--body-line-height);
+  grid-column: 3 / 11;
+  font-size: var(--body-font-size);
+  line-height: var(--body-line-height);
 }
 
+@media screen and (max-width: 968px) {
+  .article__author,
+  .article__title,
+  .article__content {
+    grid-column: span 12;
+    padding: 0 20px 0 20px;
+  }
+}
 </style>
