@@ -12,4 +12,4 @@ Also a backlog is created for a full overview of what needs to be done before la
 The finished product is published through Netlify, and viewd by designer Febuary 2nd.
 
 Link to Netlify
-<a href "https://thirsty-euler-935c5b.netlify.app/"> In(dex) </a>
+https://thirsty-euler-935c5b.netlify.app/
