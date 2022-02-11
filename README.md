@@ -10,3 +10,7 @@ Variables will help the group end up at a similar looking design, even when work
 From start to finish, the group is working around a sprint log, that instructs tasks that needs to be finished by the end of the week. One sprint is from monday - friday. Giving us a total of two sprints.
 Also a backlog is created for a full overview of what needs to be done before launching the website.
 The finished product is published through Netlify, and viewd by designer Febuary 2nd.
+
+
+<h2> In(dex) </h2>
+<a href "https://thirsty-euler-935c5b.netlify.app/"> In(dex) </a>
