@@ -11,6 +11,5 @@ From start to finish, the group is working around a sprint log, that instructs t
 Also a backlog is created for a full overview of what needs to be done before launching the website.
 The finished product is published through Netlify, and viewd by designer Febuary 2nd.
 
-
-<h2> In(dex) </h2>
+Link to Netlify
 <a href "https://thirsty-euler-935c5b.netlify.app/"> In(dex) </a>
