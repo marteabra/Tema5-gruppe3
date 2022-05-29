@@ -1,11 +1,11 @@
 <template>
-   <div class="announcement__box"> 
-      <div class="announcement__text">
+   <section class="announcement__box"> 
+      <p class="announcement__text">
          <span v-for="text in getMessage"> 
             {{ text }}
          </span>
-      </div>
-   </div> -->
+      </p>
+   </section>
 </template>
 
 <script>

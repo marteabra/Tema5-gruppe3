@@ -7,13 +7,7 @@
 
       <button @click="displayMenu" aria-label="open navigation menu" class="header__menu">
 
-        <svg
-          width="44"
-          height="26"
-          viewBox="0 0 44 26"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg width="44" height="26" viewBox="0 0 44 26" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 1H44" stroke="black" stroke-width="2" />
           <path d="M0 13H44" stroke="black" stroke-width="2" />
           <path d="M0 25H44" stroke="black" stroke-width="2" />
@@ -44,36 +38,15 @@
         </div>
       </ul>
 
-      <button
-        @click="displaySearch"
-        aria-label="open searchbar"
-        class="header__search"
-      >
-        <svg
-          width="31"
-          height="31"
-          viewBox="0 0 31 31"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle
-            cx="11.5"
-            cy="11.5"
-            r="10.5"
-            stroke="black"
-            stroke-width="2"
-          />
+      <button @click="displaySearch" aria-label="open searchbar" class="header__search">
+        <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11.5" cy="11.5" r="10.5" stroke="black" stroke-width="2" />
           <path d="M19 19L30 30" stroke="black" stroke-width="2" />
         </svg>
       </button>
 
       <div v-if="searchVisible" class="header__container">
-        <input
-          type="text"
-          placeholder="search for articles, books, etc."
-          name="searchbar"
-          class="header__input"
-        />
+        <input type="text" placeholder="search for articles, books, etc." name="searchbar" class="header__input" />
       </div>
     </nav>
   </header>

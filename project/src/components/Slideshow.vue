@@ -1,21 +1,18 @@
 <template>
-  <div class="section__header--padding--less">Journal</div>
+  <h2 class="section__header--padding--less">
+    Journal
+  </h2>
+
   <div class="slideshow">
     <figure class="slideshow__slide" :data-text-after="currentSlide.caption">
-      <img
-        class="slideshow__img"
-        :src="currentSlide.file"
-        :alt="currentSlide.title"
-      />
-      <div class="slideshow__overlay" @click="next"></div>
+
+      <img class="slideshow__img" :src="currentSlide.file" :alt="currentSlide.title" />
+
+      <div class="slideshow__overlay" @click="next">
+      </div>
+
       <div class="slideshow__dots">
-        <button
-          class="slideshow__dot"
-          :class="{ pressed: index === this.index }"
-          @click="goToIndex(index)"
-          v-for="(slide, index) in slides"
-          :aria-label="`Go to image ${index + 1}`"
-        ></button>
+        <button class="slideshow__dot" :class="{ pressed: index === this.index }" @click="goToIndex(index)" v-for="(slide, index) in slides" :aria-label="`Go to image ${index + 1}`"></button>
       </div>
     </figure>
   </div>

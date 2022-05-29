@@ -1,8 +1,8 @@
 <template>
   <footer class="footer">
-    <div class="footer__logo">
+    <p class="footer__logo">
       in(dex)
-    </div>
+    </p>
 
     <a href="/" class="footer__address" v-for="address in information">
       {{ information.address }}
@@ -14,12 +14,18 @@
       </RouterLink>
 
       <div class="footer__social-media">
-        <a href="/" class="footer__instagram"> Instagram &nearr; </a>
+        <a href="/" class="footer__instagram"> 
+          Instagram &nearr; 
+        </a>
 
-        <a href="/" class="footer__twitter"> Twitter &nearr; </a>
+        <a href="/" class="footer__twitter"> 
+          Twitter &nearr; 
+        </a>
       </div>
 
-      <a href="/" class="footer__mail">in@dex.info</a>
+      <a href="/" class="footer__mail">
+        in@dex.info
+      </a>
     </div>
   </footer>
 </template>
