@@ -164,6 +164,7 @@ export default {
 .header__item {
   display: flex;
   justify-content: center;
+  cursor: pointer;
 }
 
 .header__item-about {

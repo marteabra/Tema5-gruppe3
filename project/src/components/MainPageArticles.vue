@@ -1,25 +1,20 @@
 <template>
   <div class="section__header--padding">Latest</div>
   <div class="articles">
-    <div
-      v-for="(article, index) in articles"
-      :key="index"
-      class="articles__wrapper"
-    >
+    <div v-for="(article, index) in articles" :key="index" class="articles__wrapper">
       <div class="articles__wrapper__text">
-        <RouterLink
-          :to="{ name: 'article', params: { article_id: article.slug } }"
-        >
-          <h2>{{ article.title }}</h2>
-          <span>{{ article.lead }}</span>
+        <RouterLink :to="{ name: 'article', params: { article_id: article.slug } }">
+          <h2>
+            {{ article.title }}
+          </h2>
+
+          <span>
+            {{ article.lead }}
+          </span>
         </RouterLink>
       </div>
 
-      <img
-        class="articles__img"
-        :src="article.preview.image"
-        :alt="article.preview.caption"
-      />
+      <img class="articles__img" :src="article.preview.image" :alt="article.preview.caption" />
     </div>
   </div>
 </template>

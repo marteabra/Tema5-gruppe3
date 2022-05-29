@@ -1,35 +1,37 @@
 <template>
-  <Header />
-  <Announcement />
+   <Announcement />
 
-  <div class="page">
+   <div class="page">
       <h1 class="page__title">
          {{ title }}
       </h1>
 
       <div class="page__container">
-        <p v-for= "p in body" class="page__paragraph">
+         <p v-for= "p in body" class="page__paragraph">
             <br />
             {{ p }}
-        </p>
+         </p>
       </div>
-  </div>
-
-  <Footer />
+   </div>
 </template>
 
-
 <script>
-import Header from "../components/Header.vue";
 import Announcement from "../components/Announcement.vue";
-import Footer from "../components/Footer.vue";
+
+import seoMixin from "../mixins/seoMixin.js";
 
 export default {
-  components: {
-    Header,
-    Announcement,
-    Footer
-  },
+   mixins: [seoMixin],
+
+   components: {
+      Announcement,
+   },
+
+   created() {
+      this.metaTags({
+         title: 'About us',
+		});
+   },
 
    computed: {
          title() {
@@ -60,13 +62,13 @@ export default {
 }
 
 
-    Header {
-        z-index: 1;
-        top: 0;
-    }
+   Header {
+      z-index: 1;
+      top: 0;
+   }
 
-    Footer {
-        position: relative;
-        bottom: 0;
-    }
+   Footer {
+      position: relative;
+      bottom: 0;
+   }
 </style>

@@ -1,14 +1,14 @@
 <template>
   <div v-if="isShow" class="subscribe">
-    <div
-      v-on:click="isHidden = !isHidden"
-      v-if="isHidden"
-      class="subscribe__text"
-    >
-      <span class="full-text"
-        >Subscribe to the in(dex) newsletter for monthly updates</span
-      >
-      <div class="short-text">Get monthly updates by e-mail</div>
+    <div v-on:click="isHidden = !isHidden" v-if="isHidden" class="subscribe__text">
+      <span class="full-text">
+        Subscribe to the in(dex) newsletter for monthly updates
+      </span>
+
+      <div class="short-text">
+        Get monthly updates by e-mail
+      </div>
+      
       <button @click="isShow = !isShow" class="subscribe__close"></button>
     </div>
 

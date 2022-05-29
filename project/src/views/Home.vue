@@ -1,12 +1,10 @@
 <template>
-  <Header />
   <Announcement />
   <Subscribe />
   <div class="grid">
     <MainPageArticles />
     <Books />
     <Slideshow />
-    <Footer />
   </div>
 </template>
 
@@ -19,7 +17,11 @@ import Slideshow from "../components/Slideshow.vue";
 import Books from "../components/Books.vue";
 import Subscribe from "../components/Subscribe.vue";
 
+import seoMixin from "../mixins/seoMixin.js";
+
 export default {
+  mixins: [seoMixin],
+
   components: {
     Header,
     Announcement,
@@ -29,21 +31,17 @@ export default {
     Books,
     Subscribe,
   },
+
+  created() {
+    this.metaTags({
+        title: 'In(dex)',
+		});
+  }
 };
 </script>
 
 <style>
 .articles {
   grid-column: span 12;
-}
-
-Header {
-  z-index: 1;
-}
-
-Footer {
-  position: relative;
-  margin-top: 100px;
-  bottom: 0;
 }
 </style>

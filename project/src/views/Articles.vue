@@ -1,5 +1,4 @@
 <template>
-   <Header />
    <Announcement />
 
    <div v-if="article" class="article">
@@ -25,8 +24,6 @@
          </p>
       </article>
    </div>
-
-   <Footer />
 </template>
 
 <script>
@@ -34,17 +31,23 @@ import Header from '../components/Header.vue';
 import Announcement from '../components/Announcement.vue';
 import Footer from '../components/Footer.vue';
 
+import seoMixin from '../mixins/seoMixin.js';
+
 export default {
+   mixins: [seoMixin],
+
    components: {
-      Header,
       Announcement,
-      Footer,
    },
 
    created() {
       this.article = this.$store.state.articles.find((article) => {
          return article.slug === this.$route.params.article_id
       });
+
+      this.metaTags({
+         title: this.$route.params.article_id,
+		});
    },
 };
 </script>

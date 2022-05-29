@@ -34,6 +34,7 @@ export default {
     slides() {
       return this.$store.getters.getSlides;
     },
+    
     currentSlide() {
       return this.slides[this.index];
     },
